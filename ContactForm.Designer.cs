@@ -1,6 +1,6 @@
-﻿namespace ContactForm
+﻿namespace Contact
 {
-    partial class Form1
+    partial class ContactForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -10,15 +10,15 @@
         /// <summary>
         /// Освободить все используемые ресурсы.
         /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        ///// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing && (components != null))
+        //    {
+        //        components.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
 
         #region Код, автоматически созданный конструктором форм Windows
 
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Text = "ContactForm";
         }
 
         #endregion
