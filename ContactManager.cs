@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ContactForm
 {
     public class ContactManager
     {
-        public List<Contact> Contacts { get; private set; }
+        public List<Contactc> Contacts { get; private set; }
         public ContactManager()
         {
-            Contacts = new List<Contact>();
+            Contacts = new List<Contactc>();
             LoadContacts();
         }
-        public void AddContact(Contact contact)
+        public void AddContact(Contactc contact)
         {
             if (contact == null)
             {
@@ -23,7 +24,7 @@ namespace ContactForm
             Contacts.Add(contact);
             SaveContacts();
         }
-        public void RemoveContact(Contact contact)
+        public void RemoveContact(Contactc contact)
         {
             if (contact == null)
             {
@@ -32,7 +33,7 @@ namespace ContactForm
             Contacts.Remove(contact);
             SaveContacts();
         }
-        public List<Contact> SearchContacts(string query)
+        public List<Contactc> SearchContacts(string query)
         {
             return Contacts.Where(c => c.Name.Contains(query) ||
             c.PhoneNumber.Contains(query)).ToList();
@@ -51,7 +52,7 @@ namespace ContactForm
                     var parts = line.Split('|');
                     if (parts.Length == 2)
                     {
-                        Contacts.Add(new Contact(parts[0], parts[1]));
+                        Contacts.Add(new Contactc(parts[0], parts[1]));
                     }
                 }
             }

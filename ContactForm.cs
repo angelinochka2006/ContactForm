@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ContactForm;
 namespace Contact
 {
     public partial class ContactForm : Form
@@ -96,7 +96,7 @@ namespace Contact
                 MessageBox.Show("Заполните все поля!");
                 return;
             }
-            Contact newContact = new Contact(nameTextBox.Text, phoneNumberTextBox.Text);
+            Contactc newContact = new Contactc(nameTextBox.Text, phoneNumberTextBox.Text);
             try
             {
                 contactManager.AddContact(newContact);

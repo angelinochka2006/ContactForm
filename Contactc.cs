@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ContactForm
 {
-    public class Contact
+    public class Contactc
     {
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
-        public Contact(string name, string phoneNumber)
+        public Contactc(string name, string phoneNumber)
         {
             Name = name;
             PhoneNumber = phoneNumber;
