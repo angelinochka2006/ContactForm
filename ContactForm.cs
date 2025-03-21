@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,8 @@ namespace Contact
         private TextBox searchTextBox;
         private Button searchButton;
         private ListBox contactsListBox;
+        private Label namelabel;
+        private Label phoneLabel;
         public ContactForm()
         {
             this.Text = "Управление контактами";
@@ -27,15 +30,25 @@ namespace Contact
             this.Height = 400;
             nameTextBox = new TextBox
             {
-                Location = new System.Drawing.Point(10, 10),
-                Width = 150,
+                Location = new System.Drawing.Point(39, 9),
+                Width = 90,
 
             };
             phoneNumberTextBox = new TextBox
             {
-                Location = new System.Drawing.Point(170, 10),
+                Location = new System.Drawing.Point(170, 9),
                 Width = 150,
 
+            };
+            namelabel = new Label 
+            {
+                Location = new System.Drawing.Point(2, 8),
+                Text = "Name: " 
+            };
+            phoneLabel = new Label 
+            {
+                Location = new System.Drawing.Point(130, 9),
+                Text = "Phone: " 
             };
             addContactButton = new Button
             {
@@ -77,6 +90,8 @@ namespace Contact
             this.Controls.Add(searchTextBox);
             this.Controls.Add(searchButton);
             this.Controls.Add(contactsListBox);
+            this.Controls.Add(namelabel);
+            this.Controls.Add(phoneLabel);
             contactManager = new ContactManager();
             UpdateContactsList();
         }
